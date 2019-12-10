@@ -14,7 +14,7 @@ float LineMaker(std::array<std::string, N> inputList) {
     std::string line = "";
     std::string result = "";
     // Process
-    for (int word : inputList) {
+    for (std::string word : inputList) {
         line = "* ", word, " *";
         if (word == inputList.back()) {
             result += line;
