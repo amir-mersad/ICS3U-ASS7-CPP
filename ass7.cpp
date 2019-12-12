@@ -9,13 +9,13 @@
 
 
 template<size_t N>
-float LineMaker(std::array<std::string, N> inputList) {
+std::string LineMaker(std::array<std::string, N> inputList) {
     // Creating the variables
     std::string line = "";
     std::string result = "";
     // Process
     for (std::string word : inputList) {
-        line = "* ", word, " *";
+        line = ("* " + word + " *");
         if (word == inputList.back()) {
             result += line;
         } else {
@@ -37,8 +37,8 @@ main() {
     for (int counter = 0; counter < 5; counter++) {
         std::cout << "enter a word: ";
         std::cin >> word;
-        if (word == "") {}
-        else {
+        if (word == "") {
+        } else {
             inputList[counter] = word;
         }
     }
